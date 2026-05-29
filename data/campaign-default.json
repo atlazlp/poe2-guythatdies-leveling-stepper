@@ -25,6 +25,9 @@
       "act": 1,
       "zone": "The Grelwood",
       "steps": [
+        "Follow the river upstream — it always leads to The Red Vale.",
+        "Follow the glowing roots to the Tree of Souls.",
+        "Mushrooms mark the nearby entrance to The Grim Tangle.",
         "Pick up the guaranteed support gem from Areagne, Forgotten Witch.",
         "Respawn at her checkpoint so nearby monsters are cleared before the fight.",
         "Ignore most monsters while crossing the zone.",
@@ -92,10 +95,13 @@
       "act": 1,
       "zone": "Hunting Grounds",
       "steps": [
+        "Signpost on the main path points toward Ogham Farmlands.",
+        "Follow the pecked-at bovine trail to Crowbell.",
         "Take the level 3 skill gem from Lachlann the Lost.",
         "Main goal: Crowbell for two passive points.",
         "Optional: Dryad ritual for a free support gem if you find it.",
-        "Pick up Freythorn and complete the league mechanic for a guaranteed exalted orb.",
+        "Completing the ritual spawns a locust trail leading to Freythorn.",
+        "Complete the league mechanic for a guaranteed exalted orb.",
         "Hit Crowbell while running to the second arena to speed up his pathing."
       ]
     },
@@ -104,6 +110,7 @@
       "act": 1,
       "zone": "Freythorn",
       "steps": [
+        "Each completed ritual spawns a locust trail to the next closest ritual.",
         "Complete all three rituals, then kill the boss for 30 spirit.",
         "If you find the boss early, follow the dark energy streams from the altar to the remaining rituals.",
         "The boss teleports often — hold off until after a teleport.",
@@ -185,7 +192,8 @@
       "act": 2,
       "zone": "Traitor's Passage & Deshar",
       "steps": [
-        "Balbala, the Traitor is optional — many runners skip her and go to Deshar instead.",
+        "Traitor's Passage has a guaranteed fork — one path to Balbala, the Traitor, one to the exit.",
+        "Follow the Maraketh parchment to reach Balbala (optional — many runners skip her and go to Deshar instead).",
         "Watchful Twins: two rare mobs drop a guaranteed Djinn Barya for your first ascension.",
         "Guaranteed level 6 skill gem from Rudja, the Dread Engineer in Mawdun Mine.",
         "The Halani Gates bridges: do not run too far ahead on the first bridge or Asala can get stuck.",
@@ -233,11 +241,12 @@
     {
       "id": "a2-titan-grotto",
       "act": 2,
-      "zone": "The Titan Grotto",
+      "zone": "Valley of the Titans & The Titan Grotto",
       "steps": [
+        "Three giant Titan heads mark the area — each hides a linear canyon entrance.",
+        "Reach the end of a canyon, activate the seal, then use the portal back to the hub.",
         "Grab The Titan Grotto checkpoint near the start.",
         "If behind on XP, the abyss here can give almost a full level.",
-        "Activate the three seals, then checkpoint back to the grotto entrance.",
         "Guaranteed runes along the path only — do not go out of your way."
       ]
     },
@@ -270,6 +279,7 @@
       "act": 3,
       "zone": "Act 3 — Opening",
       "steps": [
+        "Talk to explorer camps in the jungle — they point toward the next area (shown on the minimap).",
         "League mechanic: tier 3 support gem.",
         "Lesser jeweller's orb from the Azak fire chest.",
         "Enter Jungle Ruins."
@@ -280,6 +290,8 @@
       "act": 3,
       "zone": "Jungle Ruins & The Venom Crypts",
       "steps": [
+        "The Matlan Waterways entrance is now in Jungle Ruins.",
+        "Alternate exit from The Venom Crypts shortcuts back through the jungle.",
         "Kill the monkey for extra passive points.",
         "Guaranteed rare gloves from a chest next to the NPC.",
         "League mechanic: orb of alchemy.",
@@ -290,12 +302,10 @@
     {
       "id": "a3-barrens-bog",
       "act": 3,
-      "zone": "Infested Barrens & The Azak Bog",
+      "zone": "Infested Barrens",
       "steps": [
         "Pick up the waypoint and cross the zone.",
-        "Guaranteed rare boots from a chest next to an NPC.",
-        "The Azak Bog flame-skin ritual: clear most mobs, respawn at checkpoint, repeat for fast XP.",
-        "Boss drops a spear and a gem rot skull — trade the spear to Servi for a charm."
+        "Guaranteed rare boots from a chest next to an NPC."
       ]
     },
     {
@@ -315,10 +325,13 @@
       "act": 3,
       "zone": "Jiquani's Sanctum & The Matlan Waterways",
       "steps": [
+        "The Azak Bog is now accessed from The Matlan Waterways.",
+        "The Azak Bog flame-skin ritual: clear most mobs, respawn at checkpoint, repeat for fast XP.",
+        "Boss drops a spear and a gem rot skull — trade the spear to Servi for a charm.",
         "Run one direction to find the checkpoint, then reset and explore the other way for soul cores.",
         "After placing the second soul core, respawn at checkpoint and return to the start for the boss.",
         "Pick up the large soul core and take it back to the Infested Barrens.",
-        "The Matlan Waterways: pull levers and move through.",
+        "Pull levers through The Matlan Waterways to drain Utzaal.",
         "Place a portal before the final lever interaction to save a few seconds."
       ]
     },
