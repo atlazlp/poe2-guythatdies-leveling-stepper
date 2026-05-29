@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>PoE2 Campaign Stepper</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -33,28 +35,32 @@
     </header>
 
     <main id="run-view" class="view">
-      <div class="nav-zone nav-prev" data-nav="prev"></div>
-      <div class="carousel">
-        <div class="slide prev-slide">
-          <span class="slide-label">Previous</span>
-          <p id="prev-text" class="slide-text"></p>
-        </div>
-        <div class="slide current-slide">
-          <span id="act-label" class="act-badge"></span>
-          <h1 id="zone-title" class="zone-title"></h1>
-          <p id="step-text" class="step-text"></p>
-          <span id="step-counter" class="step-counter"></span>
-        </div>
-        <div class="slide next-slide">
-          <span class="slide-label">Next</span>
-          <p id="next-text" class="slide-text"></p>
-        </div>
+      <div class="nav-overlay" aria-hidden="true">
+        <div class="nav-zone nav-prev" data-nav="prev" aria-label="Previous group"></div>
+        <div class="nav-zone nav-next" data-nav="next" aria-label="Next group"></div>
       </div>
-      <div class="nav-zone nav-next" data-nav="next"></div>
-      <div class="nav-hints">
-        <span>↑ prev</span>
-        <span>Ctrl+← / Ctrl+→</span>
-        <span>↓ next</span>
+      <div class="run-content">
+        <div class="carousel">
+          <div class="slide prev-slide">
+            <span class="slide-label">Previous</span>
+            <p id="prev-text" class="slide-text"></p>
+          </div>
+          <div class="slide current-slide">
+            <span id="act-label" class="act-badge"></span>
+            <h1 id="zone-title" class="zone-title"></h1>
+            <ol id="step-list" class="step-list-run"></ol>
+            <span id="step-counter" class="step-counter"></span>
+          </div>
+          <div class="slide next-slide">
+            <span class="slide-label">Next</span>
+            <p id="next-text" class="slide-text"></p>
+          </div>
+        </div>
+        <div class="nav-hints">
+          <span>← prev</span>
+          <span>Ctrl+← / Ctrl+→</span>
+          <span>next →</span>
+        </div>
       </div>
     </main>
 

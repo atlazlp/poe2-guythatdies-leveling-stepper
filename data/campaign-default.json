@@ -3,10 +3,10 @@
     {
       "id": "a1-miller",
       "act": 1,
-      "zone": "Clearfell — The Miller",
+      "zone": "The Riverbank — The Bloated Miller",
       "steps": [
-        "Fight the Miller in the corner opposite the entrance. Stay above 35 life for his slam.",
-        "Clear adds while focusing the Miller.",
+        "Fight the Bloated Miller in the corner opposite the entrance. Stay above 35 life for his slam.",
+        "Clear adds while focusing the Bloated Miller.",
         "Fight him away from the entrance so you can pass the blockage and enter town immediately after."
       ]
     },
@@ -15,58 +15,56 @@
       "act": 1,
       "zone": "Clearfell",
       "steps": [
-        "Grab your skill gem and kill Beira. Skip the Mud Barrow.",
+        "Grab your skill gem and kill Beira of the Rotten Pack. Skip the Mud Burrow.",
         "League mechanic here gives a transmute — only do it if you run into it naturally.",
         "Pick up the exposure skill from the guaranteed campsite gem.",
-        "Beira: apply exposure, use your main damage rotation, and save your burst until after the second exposure application.",
+        "Beira of the Rotten Pack: apply exposure, use your main damage rotation, and save your burst until after the second exposure application.",
         "When wolves spawn, time your area skills so they run into them.",
-        "After Beira you get permanent +10% cold resist. Head to the Grovewood."
+        "After Beira you get permanent +10% cold resist. Head to The Grelwood."
       ]
     },
     {
       "id": "a1-grovewood",
       "act": 1,
-      "zone": "Grovewood",
+      "zone": "The Grelwood",
       "steps": [
         "Pick up your first support gem — a major power spike for your main skill.",
-        "Ariagne: respawn at her checkpoint so nearby monsters are cleared.",
+        "Areagne, Forgotten Witch: respawn at her checkpoint so nearby monsters are cleared.",
         "Before leaving the hut, apply exposure and open with your main rotation.",
-        "After Ariagne, socket the guaranteed support gem on your main skill.",
+        "After Areagne, socket the guaranteed support gem on your main skill.",
         "Ignore most monsters while crossing the zone.",
-        "Grab the Grim Tangle checkpoint and continue to the Red Veil."
+        "Grab The Grim Tangle checkpoint and continue to The Red Vale."
       ]
     },
     {
       "id": "a1-red-veil",
       "act": 1,
-      "zone": "Red Veil",
+      "zone": "The Red Vale",
       "steps": [
-        "Click every refined arm you see — they drop the next weapon tier.",
-        "Upgrade a promising weapon to magic with a transmute when you find one.",
         "League mechanic reward is a level 2 skill gem for your main skill.",
         "Clear both obelisks, pick up runes, and reach level 4.",
         "Swap in the flasks from the checkpoint hut.",
-        "Rust King: exposure first, then your main rotation. Optionally shift a support gem during cooldowns.",
-        "Before each town trip, decide exactly what you need — movement boots, damage gloves, better weapon — then get out quickly.",
+        "The Rust King: exposure first, then your main rotation. Optionally shift a support gem during cooldowns.",
+        "Before each town trip, decide exactly what you need — then get out quickly.",
         "Portal to town: identify rares, clear inventory, grab quest items from Renley.",
         "Vendor check for damage gloves; elemental damage on gloves is a strong upgrade.",
-        "Return to Grovewood, place the spikes in the tree, then go to the Grim Tangle."
+        "Return to The Grelwood, place the spikes in the tree, then go to The Grim Tangle."
       ]
     },
     {
       "id": "a1-grim-tangle-town",
       "act": 1,
-      "zone": "Grim Tangle — Town loop",
+      "zone": "The Grim Tangle — Town loop",
       "steps": [
         "Portal to town and talk to Oona.",
-        "Return to the Grim Tangle and talk to Oona again.",
+        "Return to The Grim Tangle and talk to Oona again.",
         "Stand next to the checkpoint to pass the blockage."
       ]
     },
     {
       "id": "a1-grim-tangle",
       "act": 1,
-      "zone": "Grim Tangle",
+      "zone": "The Grim Tangle",
       "steps": [
         "Head straight to the boss for a guaranteed support gem. Aim to leave at level 5 or higher.",
         "Tight corridors make fights awkward — place skills carefully.",
@@ -80,7 +78,7 @@
       "act": 1,
       "zone": "Cemetery of the Eternals",
       "steps": [
-        "Key objectives: Tomb of the Consort, league mechanic (regal orb), Mausoleum of the Pria, and the Sarcophagus ring.",
+        "Key objectives: Tomb of the Consort, league mechanic (regal orb), Mausoleum of the Praetor, and the Sarcophagus ring.",
         "Whichever ring you get, transmute it and hope for a damage prefix (~1 in 3).",
         "Tomb of the Consort rare mob: stay close and do not hit while his shield is up.",
         "After the support gem, update your links and level your main skill to 3.",
@@ -91,11 +89,11 @@
     {
       "id": "a1-draven-lachlan",
       "act": 1,
-      "zone": "Cemetery — Draven & Lachlan",
+      "zone": "Cemetery of the Eternals — Draven & Lachlann",
       "steps": [
-        "Draven moves constantly — best damage window is when he stabs the ground for his wave attack.",
+        "Draven, the Eternal Praetor moves constantly — best damage window is when he stabs the ground for his wave attack.",
         "Back at the cemetery waypoint: open the gate, respawn at checkpoint for an instant boss spawn.",
-        "Count Lachlan drops a ring that triggers a long cutscene — leave it on the ground; you unlock the Hooded One at the end of Act 1 anyway.",
+        "Count Lachlann the Lost drops a ring that triggers a long cutscene — leave it on the ground; you unlock the Hooded One at the end of Act 1 anyway.",
         "Vendor check, then enter the Hunting Grounds."
       ]
     },
@@ -104,29 +102,28 @@
       "act": 1,
       "zone": "Hunting Grounds",
       "steps": [
-        "Take the level 3 skill gem from Lachlan for clear and boss control.",
+        "Take the level 3 skill gem from Lachlann the Lost for clear and boss control.",
         "Main goal: Crowbell for two passive points.",
         "Optional: Dryad ritual for a free support gem if you find it.",
-        "Pick up Freethorn and complete the league mechanic for a guaranteed exalted orb.",
+        "Pick up Freythorn and complete the league mechanic for a guaranteed exalted orb.",
         "Hit Crowbell while running to the second arena to speed up his pathing.",
         "Phase change: reapply exposure along his path to the next arena.",
-        "Pick up the level 3 skill gem reward and grab a talisman before Freethorn.",
-        "Be level 8 before Freethorn — the experience penalty is harsh below that."
+        "Pick up the level 3 skill gem reward and grab a talisman before Freythorn.",
+        "Be level 8 before Freythorn — the experience penalty is harsh below that."
       ]
     },
     {
       "id": "a1-freethorn",
       "act": 1,
-      "zone": "Freethorn",
+      "zone": "Freythorn",
       "steps": [
         "Complete all three rituals, then kill the boss for 30 spirit.",
         "If you find the boss early, follow the dark energy streams from the altar to the remaining rituals.",
         "The boss teleports often — hold most of your burst until after a teleport.",
         "In phase 2, stunned hits knock him back far; account for that when placing skills.",
         "Pick up the gem bloom skull (+30 permanent spirit) and a spirit gem.",
-        "Ritual rewards: prioritize gear upgrades, otherwise take currency.",
-        "Town: Finn for a charm, Una for greater life and mana flasks, Renley for gear.",
-        "At level 10 you can buy a sturdy weapon from vendors.",
+        "Ritual rewards: prioritize resist and life upgrades, otherwise take currency.",
+        "Town: Finn for a charm, Una for greater life and mana flasks.",
         "Return to Hunting Grounds and checkpoint to the Ogham Farmlands."
       ]
     },
@@ -135,7 +132,7 @@
       "act": 1,
       "zone": "Ogham Farmlands",
       "steps": [
-        "Two free passive points from Una's loot — turn them in later.",
+        "Two weapon set passive points from Una's lute — turn them in later.",
         "Get a level 4 skill gem from the league mechanic or the crop circle rare mob.",
         "Crop circle: dump area skills and stand on them so spawning mobs run into the effects.",
         "Upgrade your main skill gem, then continue to Ogham Village."
@@ -147,24 +144,24 @@
       "zone": "Ogham Village",
       "steps": [
         "Grab smithing tools to unlock the salvage bench.",
-        "Open the blacksmith's chest for a blank rune and an artificer orb — save these for your level 16 weapon.",
+        "Open the blacksmith's chest for a blank rune and an artificer orb.",
         "Kill the Executioner. While loot is dropping, pull the lever, then grab everything.",
-        "Talk to the NPC before leaving.",
-        "Town: turn in Una's loot for passive points.",
+        "Talk to Leitis before leaving.",
+        "Town: turn in Una's loot for two weapon set passive points.",
         "Pick up a greater life flask if you do not have one yet.",
-        "Turn in the blank rune at Renley for a lesser storm rune — save it for the level 16 weapon.",
-        "Check vendors for a weapon upgrade and grab your level 5 skill gem."
+        "Turn in the blank rune at Renley for a lesser storm rune.",
+        "Grab your level 5 skill gem."
       ]
     },
     {
       "id": "a1-ogham-spring",
       "act": 1,
-      "zone": "Ogham Spring",
+      "zone": "Ogham Manor",
       "steps": [
         "Click the corpse for a level 1 support gem — click and move away immediately so it drops beside you for instant pickup.",
         "Good experience zone; aim for level 13 before the next area.",
-        "League mechanic: orb of alchemy (save for a weapon craft in Act 2 or 3).",
-        "League mechanic: +20 permanent maximum life from Candlemass.",
+        "League mechanic: orb of alchemy (save for crafting in Act 2 or 3).",
+        "Candlemass, the Living Rite: permanent +20 maximum life from Candlemass' Essence.",
         "Final Act 1 prep: reach level 14.",
         "Count Geonor: at half health he phases briefly — dodge and wait it out."
       ]
@@ -176,33 +173,31 @@
       "steps": [
         "Optional: raided camp for a free tier 2 support gem.",
         "League mechanic rewards an exalt — worth detouring if you are low on currency.",
-        "Wrath Breaker: use movement skill to jump across to the boss area.",
-        "Stay close and behind Wrath Breaker; his slam is the main threat.",
-        "Portal to town, talk to Asala, then use the desert map toward the Halani Gates.",
+        "Rathbreaker: use movement skill to jump across to the boss area.",
+        "Stay close and behind Rathbreaker; his slam is the main threat.",
+        "Portal to town, talk to Asala, then use the desert map toward The Halani Gates.",
         "Vendor before moving on. Once you have the quest state, teleport out immediately."
       ]
     },
     {
       "id": "a2-halani-quarry",
       "act": 2,
-      "zone": "Halani Gates & Mourn Quarry",
+      "zone": "The Halani Gates & Mawdun Quarry",
       "steps": [
-        "Use the desert map to reach Mourn Quarry.",
+        "Use the desert map to reach Mawdun Quarry.",
         "While waiting for the caravan, check vendors.",
-        "Look for a level 16 weapon base, better damage gloves, and ideally 15% movement speed boots.",
+        "Look for 15% movement speed boots and damage gloves.",
         "Guaranteed artificer orb somewhere along a wall — grab it if you pass it, do not backtrack.",
-        "Collect armor scraps and whetstones for your upcoming weapon craft.",
-        "Around level 16, craft and equip a strong magic or rare weapon using regals, exalts, and artificer orbs.",
-        "If the craft rolls badly, save currency and wait for a better base."
+        "Collect armor scraps along the route."
       ]
     },
     {
       "id": "a2-mine-rugira",
       "act": 2,
-      "zone": "The Halani Mines",
+      "zone": "Mawdun Mine",
       "steps": [
         "Respawn at checkpoint on entry to skip the elevator.",
-        "Rugira: standard boss rotation — stay close and behind her when possible.",
+        "Rudja, the Dread Engineer: standard boss rotation — stay close and behind her when possible.",
         "Talk to Risu and drop a portal while waiting for loot.",
         "Town: talk to Risu and Asala, then move to the Traitor's Passage. Vendor check first."
       ]
@@ -210,12 +205,12 @@
     {
       "id": "a2-traitors-dasha",
       "act": 2,
-      "zone": "Traitor's Passage & Dasha",
+      "zone": "Traitor's Passage & Deshar",
       "steps": [
-        "Balbala is optional — many runners skip her and go to Dasha instead.",
-        "Dasha: two rare mobs drop a guaranteed barrier for your first ascension.",
-        "Guaranteed level 6 skill gem from a chest in Dasha.",
-        "Halani Gate bridges: do not run too far ahead on the first bridge or Asala can get stuck.",
+        "Balbala, the Traitor is optional — many runners skip her and go to Deshar instead.",
+        "Watchful Twins: two rare mobs drop a guaranteed Djinn Barya for your first ascension.",
+        "Guaranteed level 6 skill gem from Rudja, the Dread Engineer in Mawdun Mine.",
+        "The Halani Gates bridges: do not run too far ahead on the first bridge or Asala can get stuck.",
         "Before the second bridge, respawn at checkpoint to reset Asala if needed."
       ]
     },
@@ -228,21 +223,20 @@
         "Pre-load skills outside the arena, then hug the wall and throw toward it.",
         "After Jamanra, take the elevator down, follow the wind for quest progress.",
         "Town: grab your level 7 skill gem, then enter Mastodon Badlands.",
-        "Abysses give currency but are optional; Lightless Passage is also skippable for now.",
-        "Start upgrading armor bases — low-level gear falls off hard here."
+        "Abysses give currency but are optional; Lightless Passage is also skippable for now."
       ]
     },
     {
       "id": "a2-bone-pits-keth",
       "act": 2,
-      "zone": "Bone Pits & Keth",
+      "zone": "The Bone Pits & Keth",
       "steps": [
         "Relic drops only from hyenas — if you reach the end without it, backtrack to missed packs without resetting checkpoint.",
         "Follow the entrance direction to reach the boss.",
         "Dual-boss fight: position to the side, open with your combo, then dodge behind the caster to hit both.",
         "Town: pick up your support gem, then continue to Keth.",
         "League mechanic: gemcutter's prism — save for endgame cluster setup.",
-        "Two passive points from Kabala.",
+        "Two weapon set passive points from Kabala, Constrictor Queen.",
         "Guaranteed amulet in a side room.",
         "Kill snakes here and in the next zone — they drop the +1 charm relic."
       ]
@@ -250,7 +244,7 @@
     {
       "id": "a2-lost-buried",
       "act": 2,
-      "zone": "Lost City & Buried Shrines",
+      "zone": "The Lost City & Buried Shrines",
       "steps": [
         "Giant beetle jewel is optional — many runners skip straight to Buried Shrines.",
         "Buried Shrines league mechanic: guaranteed lesser jeweller's orb — detour if you miss it naturally.",
@@ -264,7 +258,7 @@
     {
       "id": "a2-titan-grotto",
       "act": 2,
-      "zone": "Titan Grotto",
+      "zone": "The Titan Grotto",
       "steps": [
         "Grab the Titan Grotto checkpoint near the start.",
         "If behind on XP, the abyss here can give almost a full level.",
@@ -277,18 +271,18 @@
     {
       "id": "a2-deshar-dreadnought",
       "act": 2,
-      "zone": "Deshar & Dreadnought",
+      "zone": "Deshar & The Dreadnought",
       "steps": [
         "Town: support gem and horn. Sound the horn, then navigate to Deshar.",
         "Update flasks — giant flasks should be available.",
-        "Guaranteed artificer orb along a wall; guaranteed barrier from the Watchful Twins (optional second ascension).",
+        "Guaranteed artificer orb along a wall; Watchful Twins drop a Djinn Barya (optional second ascension).",
         "Aim for level 24.5 before leaving; farm if behind.",
-        "Pick up the letter — exchange in town later for two passive points.",
+        "Pick up the Final Letter — exchange in town later for two weapon set passive points.",
         "Use movement skills to skip broken bridges on the way to Deshar.",
-        "Permanent +10% lightning resist from the Sisters of Sekhema.",
-        "Be level 26 before fighting Toglan.",
-        "Exchange the letter with Shamron for two passive points.",
-        "Dreadnought and the next zone are dangerous — aim for level 28.5 before the final boss."
+        "Permanent +10% lightning resist from the Sisters of Garukhan.",
+        "Be level 26 before fighting Tor Gul, the Defiler.",
+        "Exchange the Final Letter with Shambrin for two weapon set passive points.",
+        "The Dreadnought and the next zone are dangerous — aim for level 28.5 before the final boss."
       ]
     },
     {
@@ -299,7 +293,7 @@
         "Final boss: ensure life and armor on gear. Phase 2 — stay close and dodge slams, or tank with decent gear.",
         "Town: talk to the Hooded One, log out and back in to return to the caravan.",
         "Talk to Asala to move to Act 3.",
-        "Kill Rootridge if you find him for a level 9 skill gem."
+        "Kill Rootdredge if you find him for a level 9 skill gem."
       ]
     },
     {
@@ -311,54 +305,53 @@
         "League mechanic: tier 3 support gem.",
         "Lesser jeweller's orb from the Azak fire chest.",
         "Update your main skill links with new support gems.",
-        "Town: check Oswald for weapon and gear upgrades, then enter Jungle Ruins."
+        "Town: check Oswald for gear upgrades, then enter Jungle Ruins."
       ]
     },
     {
       "id": "a3-jungle-venom",
       "act": 3,
-      "zone": "Jungle Ruins & Venom Crypts",
+      "zone": "Jungle Ruins & The Venom Crypts",
       "steps": [
         "Kill the monkey for extra passive points.",
         "Guaranteed rare gloves from a chest next to the NPC.",
         "League mechanic: orb of alchemy — grab if you need crafting currency.",
         "Jungle grave: click the ravaged corpse to summon Servi, grab a free rare belt.",
         "Pick up corpse snake venom and return it to Servi for a passive reward — stun threshold is common.",
-        "Check vendors, especially for a weapon upgrade, before the Infested Barrens."
+        "Check vendors before the Infested Barrens."
       ]
     },
     {
       "id": "a3-barrens-bog",
       "act": 3,
-      "zone": "Infested Barrens & Azak Bog",
+      "zone": "Infested Barrens & The Azak Bog",
       "steps": [
         "Pick up the waypoint and cross the zone.",
         "Optional XP cave if you need levels.",
         "At level 31, upgrade gems to level 9 and use your full boss setup.",
         "Guaranteed rare boots from a chest next to an NPC.",
-        "Azak Bog flame-skin ritual: clear most mobs, respawn at checkpoint, repeat for fast XP.",
-        "Boss drops a spear and a gem rot skull — trade the spear to Servi for a charm (titan or staunching recommended).",
-        "Salvage unsellable weapons for whetstones."
+        "The Azak Bog flame-skin ritual: clear most mobs, respawn at checkpoint, repeat for fast XP.",
+        "Boss drops a spear and a gem rot skull — trade the spear to Servi for a charm (titan or staunching recommended)."
       ]
     },
     {
       "id": "a3-chime-mechanium",
       "act": 3,
-      "zone": "Chime Wetlands & Jiquani's Mechanium",
+      "zone": "Chimeral Wetlands & Jiquani's Machinarium",
       "steps": [
         "Trial of Chaos is optional.",
         "Side rewards (amulet, random rare chest) only if you pass them naturally.",
         "Apply your secondary debuff skill before the main boss combo and refresh it as needed.",
-        "Pick up a soul core to progress through Mechanium.",
+        "Pick up a soul core to progress through Jiquani's Machinarium.",
         "Follow the main corridor; use movement skills through blockages.",
         "Engrave Herald of Ash when you have spirit — helps with clear.",
-        "Permanent +10% fire resist from Blackbraid before Juwani Sanctum."
+        "Permanent +10% fire resist from The Flame Core (Blackjaw, the Remnant) before Jiquani's Sanctum."
       ]
     },
     {
       "id": "a3-juwani-waterways",
       "act": 3,
-      "zone": "Juwani Sanctum & Matlan Waterways",
+      "zone": "Jiquani's Sanctum & The Matlan Waterways",
       "steps": [
         "Run one direction to find the checkpoint, then reset and explore the other way for soul cores.",
         "After placing the second soul core, respawn at checkpoint and return to the start for the boss.",
@@ -373,9 +366,9 @@
       "zone": "Drowned City",
       "steps": [
         "Talk to Alberta to enter. Pick up the waypoint — you will need it later.",
-        "Essences can appear — useful if you still need a strong weapon base.",
+        "Essences can appear — useful for crafting currency.",
         "Start with the Molten Vault to unlock the Reforging Bench.",
-        "Molten Vault boss should die quickly with a good weapon.",
+        "Molten Vault boss should die quickly with a strong setup.",
         "Town: talk to Oswald to unlock reforging, then proceed to the Apex of Filth.",
         "Apex of Filth: mostly empty — ignore mushroom quest items and Cauldron Keeper.",
         "Boss rolling slam requires a dodge roll as she lands.",
@@ -385,7 +378,7 @@
     {
       "id": "a3-temple-agarat",
       "act": 3,
-      "zone": "Temple of Cholotl & Agarat",
+      "zone": "Temple of Kopec & Aggorat",
       "steps": [
         "Optional gambling on gloves if you have gold.",
         "Second-floor stairs: 50% chance in the far corner past the central sun — check there first, then reset and check others.",
@@ -393,21 +386,21 @@
         "Summon Alva and start dialogue — portal out as soon as she says \"offering\".",
         "Vendor and prepare; upcoming zones are dangerous.",
         "Kill every Goliath — they are the only source of sacrificial hearts.",
-        "Viper boss: use stun skills for safe damage windows. Dodge consistently during the stab phase.",
+        "Viper Napuatzi: use stun skills for safe damage windows. Dodge consistently during the stab phase.",
         "Tier 3 support gem reward — update your links.",
-        "Agarat second half: sacrificial altar for two passive points.",
+        "Aggorat second half: sacrificial altar for two passive points.",
         "Sacrificial heart may only drop from Goliaths in the second half — farm there if needed."
       ]
     },
     {
       "id": "a3-black-chambers",
       "act": 3,
-      "zone": "Black Chambers",
+      "zone": "The Black Chambers",
       "steps": [
-        "Doriani opener: secondary debuff, then main combo timed for spawn, stun, and follow-up burst.",
+        "Doryani opener: secondary debuff, then main combo timed for spawn, stun, and follow-up burst.",
         "Ideal opener skips his laser phase (~15–20 seconds saved).",
         "If lasers spawn, avoid them. Phase 2: circle and use your standard combo.",
-        "Portal to town, talk to Doriani and Alva, proceed to Act 4."
+        "Portal to town, talk to Doryani and Alva, proceed to Act 4."
       ]
     },
     {
@@ -425,12 +418,12 @@
     {
       "id": "a4-isle-volcanic",
       "act": 4,
-      "zone": "Isle of Kin & Volcanic Warren",
+      "zone": "Isle of Kin & Volcanic Warrens",
       "steps": [
         "Fossilized formation along outer walls may contain a lesser jewel.",
-        "Greater rune from the Blind Beast — solid damage boost.",
-        "Volcanic Warren: kill fire golem last for a ruby ring, or lightning golem last for a topaz ring. Do not skip.",
-        "Kill Crue, then sail to Fakakanu Island."
+        "Greater rune from The Blind Beast — solid damage boost.",
+        "Volcanic Warrens: kill fire golem last for a ruby ring, or lightning golem last for a topaz ring. Do not skip.",
+        "Kill Krutog, Lord of Kin, then sail to Ngakanu."
       ]
     },
     {
@@ -449,23 +442,23 @@
     {
       "id": "a4-birds-eye",
       "act": 4,
-      "zone": "Isle of the Birds & Eye of Hinakora",
+      "zone": "Shrike Island & Eye of Hinekora",
       "steps": [
         "Town: amulet from Rogue, greater storm rune from Danig, instil Back in Action on flasks with Delirium currency.",
         "Shrine trick: skip shrine, fight boss, checkpoint back, grab shrine, re-enter for damage boost.",
-        "Talk to NPC to unlock the Eye of Hinakora.",
-        "Defeat Warriors of Namahu, Taoha, and Tasalio.",
+        "Talk to NPC to unlock the Eye of Hinekora.",
+        "Defeat Warriors of Ngamahu, Taoha, and Tasalio.",
         "Well interaction: +5% maximum mana, then checkpoint and continue."
       ]
     },
     {
       "id": "a4-halls-arast",
       "act": 4,
-      "zone": "Halls of the Dead & Arast",
+      "zone": "Halls of the Dead & Arastas",
       "steps": [
         "Totem waves drop tattoos — use for +5 resists or +5 attributes; resists recommended.",
         "Defeat Yama the White for a silver coin — exchange with Navali for two passive points.",
-        "Sail to Arast. Talk to NPC, enter, exit, wait for cutscene.",
+        "Sail to Arastas. Talk to NPC, enter, exit, wait for cutscene.",
         "Break the barrier by attacking the bubble. Kill all monsters before resetting checkpoint.",
         "Pick up both bells — one gives three exalts, the other three regals.",
         "Tavros: when he picks up a rock, stand near a priest so the rock removes the buff.",
@@ -477,11 +470,11 @@
     {
       "id": "a4-namu",
       "act": 4,
-      "zone": "Namu",
+      "zone": "Heart of the Tribe",
       "steps": [
         "League mechanic: greater jeweller's orb — save for endgame.",
         "Hug the right wall to find the Heart of the Tribe.",
-        "Kill Tarukai — prep skills before spawn: debuff, then main combo timed to land as he becomes hittable.",
+        "Kill Tavakai, the Chieftain — prep skills before spawn: debuff, then main combo timed to land as he becomes hittable.",
         "Keep distance from slams; stun skills help.",
         "Phase 2: corner positioning with dodge rolls between spike volleys.",
         "Final phase: stun into burst can end the fight quickly.",
@@ -494,16 +487,16 @@
       "zone": "Interlude 2",
       "steps": [
         "Start with Interlude 2 if you want the hardest content while zones are lowest level.",
-        "Kill the two right-side bosses, then town for two passive points from Risu.",
+        "Kill the two right-side bosses, then town for two weapon set passive points from Risu.",
         "Top-right entrance, head north; if blocked, go left for +5% maximum life.",
-        "Hug the left wall to Golai Gates waypoint, then Pools of Khatal and Salairi Sanctuary.",
+        "Hug the left wall to The Galai Gates waypoint, then Pools of Khatal and Sel Khari Sanctuary.",
         "Place two barriers in outer-wall pedestals to choose one of four amulets and one of four rings.",
         "Kill Alva for a level 60 barrier (third ascension).",
-        "Talk to Asala, return to town, waypoint to Golai Gates.",
-        "At level 52: major power spike — update your endgame skill setup and jeweller's orb crafts.",
-        "Ka: pour water for a passive (usually all resists), then Ka Reservoir.",
+        "Talk to Asala, return to town, waypoint to The Galai Gates.",
+        "At level 52: major power spike — update your endgame skill setup.",
+        "Complete the Ritual of Water at Qimah Reservoir for a passive (usually all resists), then finish the zone.",
         "Optional vials on wells for high-tier currency.",
-        "Kill Asmarod, then Mount Cradle."
+        "Kill Azmadi, the Faridun Prince at Qimah Reservoir."
       ]
     },
     {
@@ -511,12 +504,12 @@
       "act": "Interlude 3",
       "zone": "Interlude 3",
       "steps": [
-        "After Ashen Forest in Cradle Village, reach Lethara.",
-        "Stun Lethara around half HP to finish in one window if possible.",
-        "Gem rot skull reward: +40 spirit and a tier 14 spirit gem.",
+        "After Ashen Forest, reach Kriar Village.",
+        "Stun Lythara, the Wayward Spear around half HP to finish in one window if possible.",
+        "Gemcrust Skull reward: +40 spirit and a tier 14 spirit gem.",
         "Glacial Tarn: hug the right wall to Howling Caves.",
-        "Tusks from the abominable yeti — give to Hilda for two passive points.",
-        "Kill Rakar and Stormgore, then Zelina and Zolin.",
+        "Icy Tusks from The Abominable Yeti — give to Hilda for two weapon set passive points.",
+        "Kill Rakkar, the Frozen Talon and Stormgore, the Guardian, then Zelina, Blood Priestess and Zolin, Blood Priest.",
         "Kill Zelina first; her claw applies bleed — equip a staunching charm if you have one.",
         "Town: Hooded One to enter the final interlude."
       ]
@@ -526,17 +519,17 @@
       "act": "Interlude 1",
       "zone": "Interlude 1",
       "steps": [
-        "Checkpoint next to the darkness, kill two bosses to unlock Stones of Surila.",
-        "Click all six stones, then fight Siora in the center.",
+        "Checkpoint next to the darkness, kill two bosses to unlock Stones of Serle.",
+        "Click all six stones, then fight Siora, Blade of the Mists in the center.",
         "Flash/stun skills help — she moves constantly.",
         "Wait for Oona, finish dialogue, wait for quest state, enter Scorched Farmlands.",
-        "Checkpoint back to darkness, enter Blackwood.",
+        "Checkpoint back to darkness, enter The Blackwood.",
         "Ignore omen chests. Head left to Holten.",
-        "Soul of the Furyman sells greater runes — stock up for gear and next weapon.",
-        "Fight Oswin for two passive points.",
+        "Soul of the Ferryman sells greater runes — stock up for gear.",
+        "Fight Oswin, the Dread Warden for two weapon set passive points.",
         "Checkpoint to Holten, continue to Holten Estate.",
         "Loop around to stairs on the left; second floor uses a similar path.",
-        "Kill Lady Everly first, then clean up the rest."
+        "Kill Lady Elswyth first, then clean up the rest."
       ]
     },
     {

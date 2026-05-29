@@ -1,41 +1,47 @@
 const state = {
   groups: [],
-  currentStepIndex: 0,
+  currentGroupIndex: 0,
   mode: 'run',
   editing: false,
   editSnapshot: null,
   ws: null,
-  totalSteps: 0,
 };
 
 const $ = (sel) => document.querySelector(sel);
 
-function flattenSteps(groups) {
-  const flat = [];
-  for (const g of groups) {
-    g.steps.forEach((text, i) => {
-      flat.push({ groupId: g.id, group, stepIndex: i, text });
-    });
+function stepIndexToGroupIndex(groups, stepIndex) {
+  let count = 0;
+  for (let i = 0; i < groups.length; i++) {
+    count += groups[i].steps.length;
+    if (stepIndex < count) return i;
   }
-  return flat;
+  return Math.max(0, groups.length - 1);
 }
 
-function totalStepCount(groups) {
-  return groups.reduce((n, g) => n + g.steps.length, 0);
-}
-
-function clampIndex(idx) {
-  const max = Math.max(0, state.totalSteps - 1);
+function clampGroupIndex(idx) {
+  const max = Math.max(0, state.groups.length - 1);
   return Math.max(0, Math.min(idx, max));
+}
+
+function groupPreview(group) {
+  if (!group?.steps.length) return '(empty)';
+  const preview = group.steps.slice(0, 2).join(' · ');
+  if (group.steps.length > 2) return `${preview} · …`;
+  return preview;
 }
 
 async function loadProgress() {
   const res = await fetch('/api/progress');
   const data = await res.json();
   state.groups = data.groups;
-  state.currentStepIndex = data.currentStepIndex ?? 0;
-  state.totalSteps = totalStepCount(state.groups);
-  state.currentStepIndex = clampIndex(state.currentStepIndex);
+  if (data.currentGroupIndex !== undefined) {
+    state.currentGroupIndex = data.currentGroupIndex;
+  } else if (data.currentStepIndex !== undefined) {
+    state.currentGroupIndex = stepIndexToGroupIndex(state.groups, data.currentStepIndex);
+  } else {
+    state.currentGroupIndex = 0;
+  }
+  state.currentGroupIndex = clampGroupIndex(state.currentGroupIndex);
 }
 
 async function saveProgress() {
@@ -44,7 +50,7 @@ async function saveProgress() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       groups: state.groups,
-      currentStepIndex: state.currentStepIndex,
+      currentGroupIndex: state.currentGroupIndex,
     }),
   });
 }
@@ -56,66 +62,97 @@ function sendWs(msg) {
 }
 
 function connectWs() {
+  if (location.protocol !== 'http:' && location.protocol !== 'https:') {
+    return;
+  }
+
   const proto = location.protocol === 'https:' ? 'wss' : 'ws';
   state.ws = new WebSocket(`${proto}://${location.host}/ws`);
+
+  state.ws.onerror = () => {};
 
   state.ws.onmessage = (ev) => {
     const msg = JSON.parse(ev.data);
     if (msg.type === 'nav') {
       navigate(msg.direction === 'next' ? 1 : -1, false);
-    } else if (msg.type === 'state' && msg.currentStepIndex !== undefined) {
-      state.currentStepIndex = clampIndex(msg.currentStepIndex);
-      renderRunView(false);
+    } else if (msg.type === 'state' && msg.currentGroupIndex !== undefined) {
+      state.currentGroupIndex = clampGroupIndex(msg.currentGroupIndex);
+      renderRunView();
     }
   };
 
   state.ws.onclose = () => setTimeout(connectWs, 2000);
 }
 
-function navigate(delta, persist = true) {
-  const next = state.currentStepIndex + delta;
-  if (next < 0 || next >= state.totalSteps) return;
-
+function clearCarouselAnim() {
   const carousel = $('.carousel');
   carousel.classList.remove('anim-next', 'anim-prev');
-  void carousel.offsetWidth;
-  carousel.classList.add(delta > 0 ? 'anim-next' : 'anim-prev');
-
-  state.currentStepIndex = next;
-  renderRunView(true);
-
-  if (persist) {
-    saveProgress();
-    sendWs({ type: 'state', currentStepIndex: state.currentStepIndex });
-  }
+  const slide = carousel.querySelector('.current-slide');
+  slide.style.animation = 'none';
+  void slide.offsetWidth;
+  slide.style.animation = '';
 }
 
-function renderRunView(animate) {
-  const flat = flattenSteps(state.groups);
-  const cur = flat[state.currentStepIndex];
+function navigate(delta, persist = true) {
+  const next = state.currentGroupIndex + delta;
+  if (next < 0 || next >= state.groups.length) return;
+
+  const carousel = $('.carousel');
+  const animClass = delta > 0 ? 'anim-next' : 'anim-prev';
+  const slide = carousel.querySelector('.current-slide');
+
+  carousel.classList.remove('anim-next', 'anim-prev');
+  void carousel.offsetWidth;
+  carousel.classList.add(animClass);
+
+  const finish = () => {
+    carousel.classList.remove('anim-next', 'anim-prev');
+    clearCarouselAnim();
+    state.currentGroupIndex = next;
+    renderRunView();
+    if (persist) {
+      saveProgress();
+      sendWs({ type: 'state', currentGroupIndex: state.currentGroupIndex });
+    }
+  };
+
+  slide.addEventListener('animationend', finish, { once: true });
+}
+
+function renderRunView() {
+  clearCarouselAnim();
+
+  const cur = state.groups[state.currentGroupIndex];
   if (!cur) return;
 
-  const prev = state.currentStepIndex > 0 ? flat[state.currentStepIndex - 1] : null;
-  const next = state.currentStepIndex < flat.length - 1 ? flat[state.currentStepIndex + 1] : null;
+  const prev = state.currentGroupIndex > 0 ? state.groups[state.currentGroupIndex - 1] : null;
+  const next =
+    state.currentGroupIndex < state.groups.length - 1
+      ? state.groups[state.currentGroupIndex + 1]
+      : null;
 
-  const act = cur.group.act;
+  const act = cur.act;
   $('#act-label').textContent = typeof act === 'number' ? `Act ${act}` : String(act);
-  $('#zone-title').textContent = cur.group.zone;
-  $('#step-text').textContent = cur.text;
-  $('#step-counter').textContent = `${state.currentStepIndex + 1} / ${state.totalSteps}`;
+  $('#zone-title').textContent = cur.zone;
 
-  $('#prev-text').textContent = prev
-    ? `${prev.group.zone}: ${prev.text}`
-    : '(start)';
-  $('#next-text').textContent = next
-    ? `${next.group.zone}: ${next.text}`
-    : '(done)';
+  const list = $('#step-list');
+  list.innerHTML = '';
+  cur.steps.forEach((text) => {
+    const li = document.createElement('li');
+    li.textContent = text;
+    list.appendChild(li);
+  });
+
+  $('#step-counter').textContent = `${state.currentGroupIndex + 1} / ${state.groups.length}`;
+
+  $('#prev-text').textContent = prev ? `${prev.zone}: ${groupPreview(prev)}` : '(start)';
+  $('#next-text').textContent = next ? `${next.zone}: ${groupPreview(next)}` : '(done)';
 
   updateRunChrome();
 }
 
 function updateRunChrome() {
-  const atStart = state.currentStepIndex === 0;
+  const atStart = state.currentGroupIndex === 0;
   $('#reset-btn').classList.toggle('hidden', atStart || state.mode !== 'run' || state.editing);
   $('#config-btn').classList.toggle('hidden', state.mode !== 'run' || state.editing);
   $('#mode-toggle').classList.toggle('hidden', state.editing);
@@ -124,15 +161,14 @@ function updateRunChrome() {
 
 async function setMode(mode) {
   if (state.mode === 'list' && mode === 'run' && !state.editing) {
-    state.totalSteps = totalStepCount(state.groups);
-    state.currentStepIndex = clampIndex(state.currentStepIndex);
+    state.currentGroupIndex = clampGroupIndex(state.currentGroupIndex);
     await saveProgress();
   }
   state.mode = mode;
   $('#run-view').classList.toggle('hidden', mode !== 'run');
   $('#list-view').classList.toggle('hidden', mode !== 'list');
   if (mode === 'run') {
-    renderRunView(false);
+    renderRunView();
   } else {
     renderListView();
   }
@@ -178,13 +214,11 @@ function renderListView() {
     });
     card.querySelector('.remove-group').addEventListener('click', () => {
       state.groups.splice(gi, 1);
-      state.totalSteps = totalStepCount(state.groups);
-      state.currentStepIndex = clampIndex(state.currentStepIndex);
+      state.currentGroupIndex = clampGroupIndex(state.currentGroupIndex);
       renderListView();
     });
     card.querySelector('.add-step-btn').addEventListener('click', () => {
       state.groups[gi].steps.push('New step');
-      state.totalSteps = totalStepCount(state.groups);
       renderListView();
     });
 
@@ -206,8 +240,7 @@ function makeStepRow(text, gi, si) {
   });
   row.querySelector('.remove-step').addEventListener('click', () => {
     state.groups[gi].steps.splice(si, 1);
-    state.totalSteps = totalStepCount(state.groups);
-    state.currentStepIndex = clampIndex(state.currentStepIndex);
+    state.currentGroupIndex = clampGroupIndex(state.currentGroupIndex);
     renderListView();
   });
   return row;
@@ -223,8 +256,7 @@ function startEditing() {
 async function saveEditing() {
   state.editing = false;
   state.editSnapshot = null;
-  state.totalSteps = totalStepCount(state.groups);
-  state.currentStepIndex = clampIndex(state.currentStepIndex);
+  state.currentGroupIndex = clampGroupIndex(state.currentGroupIndex);
   await saveProgress();
   setMode('run');
   toast('Saved');
@@ -236,7 +268,7 @@ function cancelEditing() {
   }
   state.editing = false;
   state.editSnapshot = null;
-  state.totalSteps = totalStepCount(state.groups);
+  state.currentGroupIndex = clampGroupIndex(state.currentGroupIndex);
   setMode('run');
 }
 
@@ -269,10 +301,10 @@ function bindEvents() {
   $('#cancel-btn').addEventListener('click', cancelEditing);
 
   $('#reset-btn').addEventListener('click', async () => {
-    state.currentStepIndex = 0;
-    renderRunView(false);
+    state.currentGroupIndex = 0;
+    renderRunView();
     await saveProgress();
-    sendWs({ type: 'state', currentStepIndex: 0 });
+    sendWs({ type: 'state', currentGroupIndex: 0 });
     toast('Reset to start');
   });
 
@@ -283,16 +315,15 @@ function bindEvents() {
       zone: 'New Zone',
       steps: ['New step'],
     });
-    state.totalSteps = totalStepCount(state.groups);
     renderListView();
   });
 
   window.addEventListener('keydown', (e) => {
     if (state.mode !== 'run' || state.editing) return;
-    if (e.key === 'ArrowUp' || (e.ctrlKey && e.key === 'ArrowLeft')) {
+    if (e.ctrlKey && e.key === 'ArrowLeft') {
       e.preventDefault();
       navigate(-1);
-    } else if (e.key === 'ArrowDown' || (e.ctrlKey && e.key === 'ArrowRight')) {
+    } else if (e.ctrlKey && e.key === 'ArrowRight') {
       e.preventDefault();
       navigate(1);
     }

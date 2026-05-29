@@ -18,11 +18,11 @@ This opens the app in your browser at `http://127.0.0.1:8765/`.
 
 ### Run mode (default)
 
-- Current zone and step shown in the center; previous/next steps previewed on the sides.
-- Click the **top half** of the screen (or ↑ / **Ctrl+←**) for the previous step.
-- Click the **bottom half** (or ↓ / **Ctrl+→**) for the next step.
+- Current zone and all its steps shown in the center; adjacent groups previewed on the sides.
+- Click the **left half** of the screen for the previous group; **right half** for the next.
+- **Ctrl+← / Ctrl+→** also navigate when the browser tab is focused.
 - Does not wrap around at the ends.
-- **Reset** (corner) appears when you are not on the first step.
+- **Reset** (corner) appears when you are not on the first group.
 - **Gear icon** opens the editor with Save / Cancel.
 - **List icon** toggles list mode (auto-saves when returning to run mode).
 
@@ -32,7 +32,11 @@ View and edit zone groupings and steps. Add or remove groups and steps freely.
 
 ### Keyboard (global)
 
-While the server is running, **Ctrl+Left** and **Ctrl+Right** navigate steps even when the browser is focused elsewhere (requires `pynput`; on Linux you may need appropriate permissions for global input capture).
+While the server is running, **Ctrl+Left** and **Ctrl+Right** navigate groups even when another app (e.g. the game) is focused. On Linux this reads your keyboard via evdev; if hotkeys do not work, add your user to the `input` group and log out/in:
+
+```bash
+sudo usermod -aG input $USER
+```
 
 ## Data
 
