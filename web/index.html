@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>PoE2 Campaign Stepper</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="corner-bar">
+      <button id="mode-toggle" class="icon-btn" title="Switch mode" aria-label="Switch mode">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+        </svg>
+      </button>
+      <button id="config-btn" class="icon-btn hidden" title="Edit steps" aria-label="Edit steps">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+      <button id="reset-btn" class="icon-btn hidden" title="Reset to start" aria-label="Reset to start">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+          <path d="M3 3v5h5"/>
+        </svg>
+      </button>
+      <div id="config-actions" class="config-actions hidden">
+        <button id="save-btn" class="text-btn">Save</button>
+        <button id="cancel-btn" class="text-btn">Cancel</button>
+      </div>
+    </header>
+
+    <main id="run-view" class="view">
+      <div class="nav-zone nav-prev" data-nav="prev"></div>
+      <div class="carousel">
+        <div class="slide prev-slide">
+          <span class="slide-label">Previous</span>
+          <p id="prev-text" class="slide-text"></p>
+        </div>
+        <div class="slide current-slide">
+          <span id="act-label" class="act-badge"></span>
+          <h1 id="zone-title" class="zone-title"></h1>
+          <p id="step-text" class="step-text"></p>
+          <span id="step-counter" class="step-counter"></span>
+        </div>
+        <div class="slide next-slide">
+          <span class="slide-label">Next</span>
+          <p id="next-text" class="slide-text"></p>
+        </div>
+      </div>
+      <div class="nav-zone nav-next" data-nav="next"></div>
+      <div class="nav-hints">
+        <span>↑ prev</span>
+        <span>Ctrl+← / Ctrl+→</span>
+        <span>↓ next</span>
+      </div>
+    </main>
+
+    <main id="list-view" class="view hidden">
+      <div class="list-header">
+        <h1>Campaign Steps</h1>
+        <button id="add-group-btn" class="text-btn">+ Group</button>
+      </div>
+      <div id="group-list" class="group-list"></div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poe2-campaign-stepper"
+version = "1.0.0"
+description = "PoE2 campaign leveling step tracker"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "aiohttp>=3.9.0",
+  "pynput>=1.7.6",
+]
+
+[project.scripts]
+poe2-stepper = "server:main_cli"
+
+[tool.setuptools]
+py-modules = ["server"]
